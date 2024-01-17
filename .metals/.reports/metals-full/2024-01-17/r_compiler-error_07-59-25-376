@@ -1,0 +1,50 @@
+java.lang.NoClassDefFoundError: sourcecode/Name
+occurred in the presentation compiler.
+
+action parameters:
+offset: 108
+uri: file://<WORKSPACE>/src/main/scala/Main.scala
+text:
+// object Main {
+//   def main(args: Array[String]): Unit = {
+//     println("Hello world!")
+//   }
+// }
+<BS@@
+
+
+error stacktrace:
+scala.meta.internal.tokenizers.XmlParser$Xml$.UnpStart(XmlParser.scala:48)
+	scala.meta.internal.tokenizers.XmlParser$Xml$.Unparsed(XmlParser.scala:47)
+	scala.meta.internal.tokenizers.XmlParser$Xml$.XmlContent(XmlParser.scala:43)
+	scala.meta.internal.tokenizers.XmlParser.$anonfun$XmlExpr$1(XmlParser.scala:24)
+	scala.meta.shaded.internal.fastparse.internal.RepImpls$.rec$4(RepImpls.scala:358)
+	scala.meta.shaded.internal.fastparse.internal.RepImpls$.rep$extension(RepImpls.scala:398)
+	scala.meta.shaded.internal.fastparse.package$ByNameOps$.rep$extension(package.scala:269)
+	scala.meta.internal.tokenizers.XmlParser.XmlExpr(XmlParser.scala:24)
+	scala.meta.internal.tokenizers.LegacyScanner.$anonfun$getXml$2(LegacyScanner.scala:968)
+	scala.meta.shaded.internal.fastparse.package$.parseInputRaw(package.scala:69)
+	scala.meta.shaded.internal.fastparse.Parsed$Extra.trace(Parsed.scala:141)
+	scala.meta.shaded.internal.fastparse.Parsed$Extra.traced(Parsed.scala:120)
+	scala.meta.internal.tokenizers.LegacyScanner.getXml(LegacyScanner.scala:972)
+	scala.meta.internal.tokenizers.LegacyScanner.fetchLT$1(LegacyScanner.scala:330)
+	scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:338)
+	scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:246)
+	scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1047)
+	scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	scala.meta.internal.pc.ScriptFirstImportPosition$.tokenize(ScriptFirstImportPosition.scala:105)
+	scala.meta.internal.pc.ScriptFirstImportPosition$.skipPrefixesOffset(ScriptFirstImportPosition.scala:58)
+	scala.meta.internal.pc.ScriptFirstImportPosition$.skipUsingDirectivesOffset(ScriptFirstImportPosition.scala:55)
+	scala.meta.internal.pc.AutoImports$.fileStart$1(AutoImports.scala:365)
+	scala.meta.internal.pc.AutoImports$.autoImportPosition$$anonfun$2(AutoImports.scala:377)
+	scala.Option.getOrElse(Option.scala:201)
+	scala.meta.internal.pc.AutoImports$.autoImportPosition(AutoImports.scala:377)
+	scala.meta.internal.pc.AutoImports$.generator(AutoImports.scala:98)
+	scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:70)
+	scala.meta.internal.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:119)
